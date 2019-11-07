@@ -8,6 +8,7 @@ package com.wdd.bootDemo.action;
  */
 public class testAction {
     public static void main(String[] args) {
+        System.out.println("sssssss");
         System.out.println("----------git");
     }
 }
