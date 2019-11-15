@@ -41,4 +41,20 @@ public class TestAction {
         return testValue;
     }
 
+    @GetMapping("/fr")
+    @OperateLog(type = OperateType.DELETE)
+    public int finallyReturn() {
+        try{
+            int i= 8/0;
+            return 1;
+        }catch (Exception e){
+            System.out.println("------------exception");
+            return 2;
+        }finally {
+            System.out.println("---------finally");
+            return 0;
+        }
+
+    }
+
 }
