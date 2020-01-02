@@ -1,0 +1,12 @@
+test:
+  value: sssss
+
+spr: test
+
+spring:
+  thymeleaf:
+    cache: false
+  quartz:
+    auto-startup: true
+    job-store-type: memory
+    scheduler-name: testScheduler

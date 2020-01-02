@@ -6,7 +6,10 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 
 /**
@@ -50,11 +53,11 @@ public class LogAspect {
         Method method = signature.getMethod();
         OperateLog logAnnotation = method.getAnnotation(OperateLog.class);
         log.debug(logAnnotation.type().getOperateName());
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
         log.debug("around----after");
 
         return result;
     }
-
 
 
     @AfterReturning("pointCut()")
