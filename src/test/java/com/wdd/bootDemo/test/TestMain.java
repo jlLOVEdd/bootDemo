@@ -12,7 +12,7 @@ import java.util.Date;
  */
 public class TestMain {
     public static void main(String[] args) {
-        //dev1/dev1/dev1/dev1/dev1/dev1
+        //dev1/dev1/dev1/dev1/dev1/dev11231231231
 //        System.out.println(fun());
 
      /*   String test = "{\\\"brief\\\":\\\"\\\",\\\"templateType\\\":\\\"\\\",\\\"videoLength\\\":\\\"\\\",\\\"videoType\\\":\\\"\\\\\\\\u7c97\\\\\\\\u5207\\\",\\\"num\\\":\\\"\\\",\\\"videoID\\\":\\\"ArtiuCAYBKEwrnrT1Axl43yU161218\\\",\\\"videoTitle\\\":\\\"\\xe3\\x80\\x8a\\\\\\\\u9762\\\\\\\\u5bf9\\\\\\\\u9762\\xe3\\x80\\x8b 20161218\\\",\\\"pubDate\\\":\\\"1482072818000\\\",\\\"commentNum\\\":\\\"\\\",\\\"videoUrl\\\":\\\"\\\",\\\"videoImage\\\":\\\"http://p5.img.cctvpic.com/fmspic/2016/12/18/a9b1dd42996c40ed93f4bf8098882a15-1211.jpg\\\",\\\"videoPlayID\\\":\\\"a9b1dd42996c40ed93f4bf8098882a15\\\",\\\"videoPageId\\\":\\\"\\\",\\\"videoTag\\\":\\\"\\\"}";
