@@ -20,6 +20,7 @@ public class TestAction {
     @Value("${spr}")
     private String spr;
 
+
     @GetMapping("/tt")
     @OperateLog(type = OperateType.ADD)
     public String tes1t() {

@@ -1,10 +1,17 @@
 package com.wdd.bootDemo.action;
 
+import com.wdd.bootDemo.service.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class IndexController {
+
+    @Autowired
+    private OrderService orderService;
 
     @RequestMapping("/index1")
     public String index() {
@@ -28,7 +35,8 @@ public class IndexController {
 
     @RequestMapping("/base")
     public String base() {
-        return "base";
+
+        return orderService.getUser().getUserName();
     }
 
 

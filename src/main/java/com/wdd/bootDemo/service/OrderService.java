@@ -1,6 +1,8 @@
 package com.wdd.bootDemo.service;
 
-import lombok.Data;
+import com.wdd.bootDemo.dao.OrderDao;
+import com.wdd.bootDemo.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,8 +12,13 @@ import org.springframework.stereotype.Service;
  * @Version 1.0
  */
 @Service
-@Data
 public class OrderService {
-    private String productName;
-    private String ProductNo;
+
+    @Autowired
+    private OrderDao orderDao;
+
+
+    public User getUser() {
+        return orderDao.getUser();
+    }
 }

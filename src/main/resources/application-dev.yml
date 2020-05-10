@@ -10,3 +10,22 @@ spring:
     auto-startup: true
     job-store-type: memory
     scheduler-name: testScheduler
+
+  datasource:
+    url:  jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: ${password}
+    driver-class-name: com.mysql.jdbc.NonRegisteringDriver
+
+
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.wdd.bootDemo.entity
+  #开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    root: debug
