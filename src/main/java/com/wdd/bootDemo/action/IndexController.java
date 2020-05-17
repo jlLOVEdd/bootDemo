@@ -1,7 +1,9 @@
 package com.wdd.bootDemo.action;
 
+import com.wdd.bootDemo.service.LogService;
 import com.wdd.bootDemo.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +14,10 @@ public class IndexController {
 
     @Autowired
     private OrderService orderService;
+
+    @Qualifier("logServiceImpl")
+    @Autowired
+    private LogService logService;
 
     @RequestMapping("/index1")
     public String index() {

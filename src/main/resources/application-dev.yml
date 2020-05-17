@@ -18,6 +18,23 @@ spring:
     driver-class-name: com.mysql.jdbc.NonRegisteringDriver
 
 
+  redis:
+    database: 0
+    cluster:
+      nodes:
+        - 127.0.0.1:6379
+        - 127.0.0.1:6380
+        - 127.0.0.1:6381
+        - 127.0.0.1:6382
+        - 127.0.0.1:6383
+        - 127.0.0.1:6384
+      max-redirects: 10
+    lettuce:
+      pool:
+        max-active: 8
+
+
+
 mybatis:
   #mapper配置文件
   mapper-locations: classpath:mapper/*.xml

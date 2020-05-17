@@ -14,6 +14,6 @@ public class BootDemoApplication {
 
 
 		SpringApplication.run(BootDemoApplication.class, args);
-	}
+}
 
 }
