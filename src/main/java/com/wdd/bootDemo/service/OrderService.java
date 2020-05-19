@@ -11,14 +11,10 @@ import org.springframework.stereotype.Service;
  * @Date 2020/5/8 15:49
  * @Version 1.0
  */
-@Service
-public class OrderService {
 
-    @Autowired
-    private OrderDao orderDao;
+public interface OrderService {
 
 
-    public User getUser() {
-        return orderDao.getUser();
-    }
+
+    public User getUser();
 }
