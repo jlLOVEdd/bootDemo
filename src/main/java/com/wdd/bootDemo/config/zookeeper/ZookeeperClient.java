@@ -15,7 +15,7 @@ import java.util.concurrent.CountDownLatch;
  * @Version 1.0
  */
 public class ZookeeperClient implements Watcher {
-    private final static int SESSION_TIMEOUT = 5000;
+    private final static int SESSION_TIMEOUT = 50000;
     private ZooKeeper zooKeeper = null;
 
     private CountDownLatch countDownLatch = new CountDownLatch(1);
@@ -34,7 +34,7 @@ public class ZookeeperClient implements Watcher {
 
     public void createNode(String nodeName,String data) throws KeeperException, InterruptedException {
         String path = "/" + nodeName;
-        zooKeeper.create(path, data.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        zooKeeper.create(path, data.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
         System.out.println(path + "  created");
     }
 

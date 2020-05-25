@@ -5,3 +5,8 @@ server:
 spring:
   profiles:
     active: dev
+  thymeleaf:
+    cache: false
+    mode: HTML
+    prefix: classpath:templates/client/
+    suffix: .html

@@ -16,7 +16,7 @@ public class ZKTest {
         ZookeeperClient zookeeperClient = new ZookeeperClient();
 
         zookeeperClient.getConnection("127.0.0.1:2181");
-       // zookeeperClient.createNode("java", "hello zookeeper");
+        zookeeperClient.createNode("eeee", "hello zookeeper");
 
         // System.out.println(zookeeperClient.getNodeData("java",new NodeDataWatcher()));
         zookeeperClient.addWatcher("java",new NodeDataWatcher());
