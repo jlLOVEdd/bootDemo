@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+/**
+ * @author ctvit
+ */
 @SpringBootApplication
 @MapperScan(basePackages = "com.wdd.bootDemo.dao",annotationClass = Repository.class)
 @EnableTransactionManagement
