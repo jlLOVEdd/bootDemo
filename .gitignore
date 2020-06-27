@@ -4,6 +4,7 @@ target/
 !**/src/test/**
 
 ### STS ###
+./log_home_IS_UNDEFINED
 .apt_generated
 .classpath
 .factorypath
